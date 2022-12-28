@@ -43,11 +43,6 @@ li {
 li:first-letter {
   text-transform: capitalize;
 }
-.weather-temperature {
-  font-size: 50px;
-  margin-top: -15px;
-  margin-left: -7px;
-}
 
 .weather-temperature strong {
   font-size: 50px;
