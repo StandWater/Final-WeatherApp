@@ -40,6 +40,9 @@ li {
   line-height: 19px;
 }
 
+li:first-letter {
+  text-transform: capitalize;
+}
 .weather-temperature {
   font-size: 50px;
   margin-top: -15px;
