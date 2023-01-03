@@ -1,10 +1,6 @@
 function formatDate(timestamp) {
-  let date = new Date(timestamp);
-  let hours = date.getHours();
-  let minutes = date.getMinutes();
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
+  let now = new Date(timestamp);
+  let currentDate = document.querySelector("#dateTime");
   let days = [
     "Sunday",
     "Monday",
@@ -14,8 +10,34 @@ function formatDate(timestamp) {
     "Friday",
     "Sunday",
   ];
-  let day = date.getDay();
-  return `$(day) $(hours):$(minutes)`;
+  let day = days[now.getDay()];
+  let date = now.getDate();
+  let months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  let month = months[now.getMonth()];
+  let hour = now.getHours();
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
+  let minute = now.getMinutes();
+  if (minute < 10) {
+    minute = `0${minute}`;
+  }
+
+  currentDate.innerHTML = `${day}, ${date} ${month}, ${hour}:${minute}`;
+  return `${day}, ${date} ${month}, ${hour}:${minute}`;
 }
 
 function displayTemp(response) {
