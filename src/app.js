@@ -37,7 +37,7 @@ function formatDate(timestamp) {
   }
 
   currentDate.innerHTML = `${day}, ${date} ${month}, ${hour}:${minute}`;
-  return `${day}, ${date} ${month}, ${hour}:${minute}`;
+  return `${date} ${month}, ${day} ${hour}:${minute}`;
 }
 
 function formatDay(timestamp) {
